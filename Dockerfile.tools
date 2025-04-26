@@ -1,0 +1,17 @@
+# Dockerfile for utilities like curl, gnupg, coreutils, ffmpeg, etc.
+FROM alpine:3.20
+
+RUN apk add --no-cache \
+    curl \
+    gnupg \
+    coreutils \
+    ffmpeg \
+  && adduser -D myuser \
+  && mkdir /workspace \
+  && chown myuser:myuser /workspace
+
+WORKDIR /workspace
+
+USER myuser
+
+CMD ["sh"]
