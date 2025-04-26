@@ -1,0 +1,24 @@
+# Ignore Docker build cache
+.docker/
+
+# Ignore editor-specific files
+.vscode/
+
+# Ignore system files (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore backup and swap files
+*.bak
+*.swp
+
+# Ignore any log files
+*.log
+
+# Ignore compiled files (common for certain languages)
+*.o
+*.a
+*.so
+
+# Ignore temporary files
+*.tmp
